@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>博客详情页</title>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <link rel="stylesheet" href="./static/css/me.css">
+</head>
+<body>
+<!--导航-->
+<!--ui: ui 组件, inverted 反转为黑色,attached 贴合,依附-->
+<nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+    <div class="ui container">
+        <!--ui inverted secondary menu-->
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui teal header item">Giraffe Tree</h2>
+            <a href="#" class="m-item item m-mobile-hide"><i
+                    class="home icon"></i>首页</a>
+            <a href="#" class="m-item item m-mobile-hide"><i
+                    class="idea icon"></i>分类</a>
+            <a href="#" class="m-item item m-mobile-hide"><i
+                    class="clone icon"></i>归档</a>
+            <a href="#" class="m-item item m-mobile-hide"><i
+                    class="tags icon"></i>标签</a>
+            <a href="#" class="m-item item m-mobile-hide"><i
+                    class="info icon"></i>关于我</a>
+            <div class="right m-item m-mobile-hide item ">
+                <div class="ui icon inverted transparent input">
+                    <input type="text" placeholder="Search...">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#"
+       class="ui meun toggle black icon button m-right-top m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+
+</nav>
+
+<!--中间内容-->
+<div class="m-container-small m-padded-tb-large">
+    <div class="ui container ">
+        <div class="ui top attached segment">
+            <div class="ui item">
+                <h1 class="ui center aligned  header">spring的使用</h1>
+            </div>
+        </div>
+        <!--<div class="ui attached segment">-->
+        <!--<img src="https://unsplash.it/800/450?image=1005" alt="" class="ui fluid rounded image">-->
+        <!--</div>-->
+
+        <!--作者/时间/浏览 基本信息-->
+        <div class="ui attached segment">
+
+            <div class="ui horizontal link list">
+                <div class="item">
+                    <!--avatar圆形-->
+                    <img src="https://unsplash.it/100/100?image=1005"
+                         alt=""
+                         class="ui avatar image">
+                    <div class="content">
+                        <!--class="header"-->
+                        <a href="#">Giraffe Tree</a>
+                    </div>
+                </div>
+                <div class=" item">
+                    <i class="calendar icon"></i>2017-12-30
+                </div>
+                <div class=" item">
+                    <i class="eye icon"></i>132
+                </div>
+            </div>
+        </div>
+
+        <!--文章内容-->
+        <div class="ui attached segment">
+
+            <!--<h2 class="ui center aligned header">标题</h2>-->
+            <div id="content" class="m-padded-lr-responsive">
+                <article class="markdown-body entry-content" itemprop="text">
+                    <h1><a href="#java-8" aria-hidden="true" class="anchor"
+                           id="user-content-java-8">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>Java 8
+                    </h1>
+                    <p>参考：《Java 8 in action》</p>
+                    <h2><a href="#第一章-为什么关心-java-8" aria-hidden="true"
+                           class="anchor" id="user-content-第一章-为什么关心-java-8">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>第一章 为什么关心 Java 8
+                    </h2>
+                    <p>java8 中给我们带来了很多的改变：</p>
+                    <ul>
+                        <li>Stream Api 支持处理数据的并行操作（需要两点：1.不共享的可变数据
+                            2.向方法传递代码的能力）
+                        </li>
+                        <li>可以向方法传递代码 也就是说行为参数化</li>
+                        <li>接口可以支持实现默认方法</li>
+                    </ul>
+                    <p>我们可以直接调用Apple中的isGreenApple方法判断</p>
+                    <pre><code>List&lt;Apple&gt; list1 =apples.parallelStream()
+	.filter(Apple::isGreenApple ).collect(Collectors.toList());
+
+</code></pre>
+                    <p>我们也可以自定义 filterApples的</p>
+                    <pre><code>for (Apple apple : inventory) {
+			if (predicate.test(apple)) {
+				apples.add(apple);
+			}
+}
+
+</code></pre>
+                    <p>来进行判断</p>
+                    <pre><code>List&lt;Apple&gt; list3 = filterApples(apples,
+	(Apple a) -&gt; a.getWeight() &lt; 200 || "green".equals(a.getColor()));
+
+</code></pre>
+                    <p>也可以通过将list转为stream进行过滤操作</p>
+                    <pre><code>List&lt;Apple&gt; list4 =apples.stream()
+	.filter((Apple a) -&gt; a.getWeight() &lt; 200 ).collect(Collectors.toList());
+
+</code></pre>
+                    <p><strong>编程语言，要不改变，要不衰亡。</strong> 或者我想在后面加一句，人也是一样。</p>
+                    <h2><a href="#第二章-通过行为参数化传递代码" aria-hidden="true"
+                           class="anchor" id="user-content-第二章-通过行为参数化传递代码">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>第二章 通过行为参数化传递代码
+                    </h2>
+                    <p>
+                        行为化参数：一种软件开发模式，感觉有点像策略模式，就是通过对象传递的，使用的是匿名内部类，然后使用lambda表达式简化代码量。</p>
+                    <p>Lambda 像是一种表达式语言(Expression
+                        Lauguage)，通过编译器，然后生成代码。（这个理解有待考证）</p>
+                    <p>-&gt; 的前面部分是方法传入的参数
+                        -&gt; 的后面部分是方法体</p>
+                    <pre><code> (Apple a) -&gt; a.getWeight() &lt; 200
+
+</code></pre>
+                    <h2><a href="#第三章-lambda-表达式" aria-hidden="true"
+                           class="anchor" id="user-content-第三章-lambda-表达式">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>第三章 Lambda 表达式
+                    </h2>
+                    <p>Lambda 表达式是一种匿名函数，可以简洁地传递代码</p>
+                    <p>有一些通用的接口，已经定义在java.util.function包中</p>
+                    <ul>
+                        <li>predicate</li>
+                        <li>consumer</li>
+                        <li>supplier</li>
+                        <li>function</li>
+                    </ul>
+                    <p>为了避免装箱，还提供了</p>
+                    <ul>
+                        <li>intPredicate</li>
+                        <li>IntToLongFunction</li>
+                    </ul>
+                    <pre><code>		List&lt;Apple&gt; apples = new Apple().getApples();
+		//plan A  写一个实现 comparator 接口的类
+		//如：class AppleComparator implements Comparator&lt;Apple&gt;{...}
+		apples.sort(new AppleComparator());
+
+		//plan B 调用匿名内部类
+		//实现comparator 的 compare 方法
+
+		//plan C Lambda 表达式
+		apples.sort((a1,a2)-&gt;a1.getWeight()-a2.getWeight());
+		apples.sort((a1,a2)-&gt;a1.getWeight().compareTo(a2.getWeight()));
+		apples.sort(Comparator.comparing((a)-&gt;a.getWeight()));
+
+		//plan D 使用方法引用
+		apples.sort(Comparator.comparing(Apple::getWeight));
+
+		//逆序 reversed 是对之前的顺序进行完全的反转
+		apples.sort(Comparator.comparing(Apple::getWeight).reversed().thenComparing(Apple::getName));
+
+</code></pre>
+                    <h3><a href="#函数式接口" aria-hidden="true" class="anchor"
+                           id="user-content-函数式接口">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>函数式接口
+                    </h3>
+                    <p>Java8
+                        允许接口中含有非抽象方法，这种在接口中使用default修饰的非抽象方法称为默认方法，默认方法也不会影响函数式接口的特性。我们依然可以认为它是一个函数式接口。</p>
+                    <p>A default method cannot override a method from
+                        java.lang.Object</p>
+                    <h2><a href="#第四章-流与集合" aria-hidden="true" class="anchor"
+                           id="user-content-第四章-流与集合">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>第四章 流与集合
+                    </h2>
+                    <h3><a href="#流和集合的区别" aria-hidden="true" class="anchor"
+                           id="user-content-流和集合的区别">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>流和集合的区别
+                    </h3>
+                    <p>TODO：
+                        流： 从支持数据处理操作的源生成的元素序列
+                        流的目的在于表达计算，而集合讲的数据
+                        集合中是以特定的时间、空间复杂度来存储和访问元素</p>
+                    <h3><a href="#流只能遍历一次" aria-hidden="true" class="anchor"
+                           id="user-content-流只能遍历一次">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>流只能遍历一次
+                    </h3>
+                    <p>比如：</p>
+                    <pre><code>		Stream&lt;String&gt; stream1 = dishes.stream().map(Dish::getName);
+		stream1.forEach(System.out::println);
+		stream1.forEach(System.out::println);
+</code></pre>
+                    <p>会产生以下问题：</p>
+                    <pre><code>java.lang.IllegalStateException: stream has already been operated upon or closed
+</code></pre>
+                    <p>流只能消费一次，当流遍历一次后需要重新从原始的数据源获得一个流</p>
+                    <h3><a href="#内部迭代" aria-hidden="true" class="anchor"
+                           id="user-content-内部迭代">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>内部迭代
+                    </h3>
+                    <p>当你使用外部迭代，就是显式地使用foreach，就需要我们自己进行并行实现和数据表示</p>
+                    <p>而java 需要一个没有迭代器的接口，且需要进行简单的并行问题，于是就有了 Stream</p>
+                    <p>
+                        stream是使用内部迭代的，内部迭代可以自动选择一种适合你硬件的数据表示和并行实现,你不需要进行显式地管理数据集合的迭代了</p>
+                    <h3><a href="#流操作" aria-hidden="true" class="anchor"
+                           id="user-content-流操作">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>流操作
+                    </h3>
+                    <ul>
+                        <li>filter</li>
+                        <li>map</li>
+                        <li>limit</li>
+                        <li>sorted</li>
+                        <li>distinct</li>
+                    </ul>
+                    <h3><a href="#终端操作" aria-hidden="true" class="anchor"
+                           id="user-content-终端操作">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>终端操作
+                    </h3>
+                    <ul>
+                        <li>forEach</li>
+                        <li>count</li>
+                        <li>collect 可以进行转换，
+                            <ul>
+                                <li>例如：转换成List: <code>collect(Collectors.toList());</code>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h2><a href="#第五章-使用流" aria-hidden="true" class="anchor"
+                           id="user-content-第五章-使用流">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>第五章 使用流
+                    </h2>
+                    <h3><a href="#对流进行筛选切片" aria-hidden="true" class="anchor"
+                           id="user-content-对流进行筛选切片">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>对流进行筛选、切片
+                    </h3>
+                    <ul>
+                        <li>filter</li>
+                        <li>distinct 返回不重复的元素</li>
+                        <li>skip 跳过前面的几个元素</li>
+                        <li>limit 限制输出</li>
+                    </ul>
+                    <h3><a href="#提取转换liu" aria-hidden="true" class="anchor"
+                           id="user-content-提取转换liu">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>提取转换liu
+                    </h3>
+                    <ul>
+                        <li>map</li>
+                        <li>flatmap</li>
+                    </ul>
+                    <h3><a href="#查找流中的元素" aria-hidden="true" class="anchor"
+                           id="user-content-查找流中的元素">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>查找流中的元素
+                    </h3>
+                    <ul>
+                        <li>findFirst</li>
+                        <li>findAny</li>
+                        <li>allMatch</li>
+                        <li>noneMatch</li>
+                        <li>anyMatch</li>
+                    </ul>
+                    <h3><a href="#归约" aria-hidden="true" class="anchor"
+                           id="user-content-归约">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>归约
+                    </h3>
+                    <ul>
+                        <li>reduce</li>
+                    </ul>
+                    <p>可以用来计算 总和，最大值，最小值</p>
+                    <p>无状态操作：</p>
+                    <blockquote>
+                        <p>例如map，filter等不会知道这个操作之前发生了什么</p>
+                    </blockquote>
+                    <p>有状态操作</p>
+                    <blockquote>
+                        <p>
+                            例如reduce,sorted，skip，limit，distinct等需要将一定的数据放入缓存才能工作</p>
+                    </blockquote>
+                    <h3><a href="#原始类型流特化" aria-hidden="true" class="anchor"
+                           id="user-content-原始类型流特化">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>原始类型流特化
+                    </h3>
+                    <ul>
+                        <li>IntStream</li>
+                        <li>LongStream</li>
+                        <li>DoubleStream</li>
+                    </ul>
+                    <p>为什么要存在这些原始类型流呢？</p>
+                    <blockquote>
+                        <p>为了效率，因为装箱的复杂，int和integer的效率差异</p>
+                    </blockquote>
+                    <h4><a href="#原始类型流---stream" aria-hidden="true"
+                           class="anchor" id="user-content-原始类型流---stream">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>原始类型流 -&gt; Stream
+                    </h4>
+                    <blockquote>
+                        <p>intStream.boxed()</p>
+                    </blockquote>
+                    <h4><a href="#stream---原始类型流" aria-hidden="true"
+                           class="anchor" id="user-content-stream---原始类型流">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>Stream -&gt; 原始类型流
+                    </h4>
+                    <blockquote>
+                        <p>stream.mapToInt(...)</p>
+                    </blockquote>
+                    <h3><a href="#iterate-与-generate" aria-hidden="true"
+                           class="anchor" id="user-content-iterate-与-generate">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>iterate 与 generate
+                    </h3>
+                    <p><strong>generate</strong></p>
+                    <pre><code>Stream.generate(Math::random).limit(10).forEach(System.out::println);
+</code></pre>
+                    <p><strong>iterate</strong></p>
+                    <pre><code>Stream.iterate(new int[]{0,1}, t-&gt;new int[]{t[1],t[0]+t[1]}).skip(10).limit(10).forEach(t-&gt;System.out.println(t[0]+"  "+t[1]));
+</code></pre>
+                    <h2><a href="#第6章-用流收集数据" aria-hidden="true" class="anchor"
+                           id="user-content-第6章-用流收集数据">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>第6章 用流收集数据
+                    </h2>
+                    <h3><a href="#收集器" aria-hidden="true" class="anchor"
+                           id="user-content-收集器">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>收集器
+                    </h3>
+                    <h2><a href="#第12章-时间和日期函数" aria-hidden="true"
+                           class="anchor" id="user-content-第12章-时间和日期函数">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>第12章 时间和日期函数
+                    </h2>
+                    <h3><a href="#localdate" aria-hidden="true" class="anchor"
+                           id="user-content-localdate">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>LocalDate
+                    </h3>
+                    <ol>
+                        <li>
+                            <p>获取现在的日期</p>
+                            <blockquote>
+                                <p>LocalDate today = LocalDate.now();</p>
+                            </blockquote>
+                        </li>
+                        <li>
+                            <p>返回指定的日期</p>
+                            <blockquote>
+                                <p>LocalDate birthday = LocalDate.of(2009, 07,
+                                    20);
+                                    LocalDate parse =
+                                    LocalDate.parse("2017-07-20");</p>
+                            </blockquote>
+                        </li>
+                        <li>
+                            <p>获取日期加减后的日期,可以加减一个月</p>
+                        </li>
+                    </ol>
+                    <pre><code>LocalDate testMin = today.minus(1, ChronoUnit.MONTHS)
+		.minus(1,ChronoUnit.DAYS).plus(1, ChronoUnit.YEARS);
+LocalDate finalDate   = LocalDate.now().plus(Period.ofMonths(2));
+
+</code></pre>
+                    <ol start="4">
+                        <li>
+                            <p>判断是否是闰年</p>
+                            <blockquote>
+                                <p>boolean leapYear =
+                                    LocalDate.now().isLeapYear();</p>
+                            </blockquote>
+                        </li>
+                        <li>
+                            <p>返回一个日期是星期几，在一个月中的第几天</p>
+                            <blockquote>
+                                <p>DayOfWeek dayOfWeek =
+                                    testMin.getDayOfWeek();</p>
+                            </blockquote>
+                        </li>
+                        <li>
+                            <p>判断日期之间的前后关系，是否是同一天</p>
+                            <blockquote>
+                                <p>boolean isAfter = testMin.isAfter(today);</p>
+                            </blockquote>
+                        </li>
+                    </ol>
+                    <h3><a href="#localtime" aria-hidden="true" class="anchor"
+                           id="user-content-localtime">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>LocalTime
+                    </h3>
+                    <ol>
+                        <li>
+                            <p>获取现在的时间</p>
+                            <blockquote>
+                                <p>LocalTime now = LocalTime.now();</p>
+                            </blockquote>
+                        </li>
+                        <li>
+                            <p>解析字符串，转化为时间</p>
+                            <blockquote>
+                                <p>int hour =
+                                    LocalTime.parse("15:02").getHour();</p>
+                            </blockquote>
+                        </li>
+                        <li>
+                            <p>创建时间</p>
+                            <blockquote>
+                                <p>LocalTime nowTime = LocalTime.of(15, 02);</p>
+                            </blockquote>
+                        </li>
+                        <li>
+                            <p>对时间进行加减</p>
+                            <blockquote>
+                                <p>LocalTime nextHour = LocalTime.now().plus(1,
+                                    ChronoUnit.HOURS);</p>
+                            </blockquote>
+                        </li>
+                        <li>
+                            <p>检查时间的前后关系</p>
+                            <blockquote>
+                                <p>boolean isBefore =
+                                    LocalTime.now().isBefore(LocalTime.now());</p>
+                            </blockquote>
+                        </li>
+                    </ol>
+                    <h3><a href="#localdatetime" aria-hidden="true"
+                           class="anchor" id="user-content-localdatetime">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>LocalDateTime
+                    </h3>
+                    <p>普通方法同LocalDate,LocalTime</p>
+                    <h4><a href="#日期格式化" aria-hidden="true" class="anchor"
+                           id="user-content-日期格式化">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>日期格式化
+                    </h4>
+                    <p>字符串转日期</p>
+                    <pre><code>DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy.MM.dd HH:mm:ss");
+
+LocalDateTime localDateTime = LocalDateTime.parse("2017.07.20 15:27:44", dateTimeFormatter);
+</code></pre>
+                    <p>日期转字符串</p>
+                    <pre><code>DateTimeFormatter dateTimeFormatter2 = DateTimeFormatter.ofPattern("yy-MM-dd");
+String today = LocalDateTime.now().format(dateTimeFormatter2);
+
+</code></pre>
+                    <p>计算两个时间的间隔</p>
+                    <blockquote>
+                        <p>long between = ChronoUnit.DAYS.between(initialDate,
+                            finalDate);</p>
+                    </blockquote>
+                    <h4><a href="#localdate-转-date" aria-hidden="true"
+                           class="anchor" id="user-content-localdate-转-date">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>localdate 转 date
+                    </h4>
+                    <p>1）使用ZonedDateTime将LocalDate转换为Instant。
+                        2）使用from（）方法从Instant对象获取Date的实例</p>
+                    <pre><code>		ZoneId zoneId = ZoneId.systemDefault();
+        LocalDate localDate = LocalDate.now();
+        ZonedDateTime zdt = localDate.atStartOfDay(zoneId);
+
+        Date date = Date.from(zdt.toInstant());
+</code></pre>
+                    <h4><a href="#date-转-localdate" aria-hidden="true"
+                           class="anchor" id="user-content-date-转-localdate">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>date 转 localdate
+                    </h4>
+                    <p>1）将java.util.Date转换为ZonedDateTime。
+                        2）使用它的toLocalDate（）方法从ZonedDateTime获取LocalDate。</p>
+                    <pre><code> 		Date date = new Date();
+        Instant instant = date.toInstant();
+        ZoneId zoneId = ZoneId.systemDefault();
+
+        // atZone()方法返回在指定时区从此Instant生成的ZonedDateTime。
+        LocalDate localDate = instant.atZone(zoneId).toLocalDate();
+</code></pre>
+                    <h2><a href="#其他参考" aria-hidden="true" class="anchor"
+                           id="user-content-其他参考">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>其他参考
+                    </h2>
+                    <h4><a href="#深入理解java-8-lambda语言篇lambda方法引用目标类型和默认方法"
+                           aria-hidden="true" class="anchor"
+                           id="user-content-深入理解java-8-lambda语言篇lambda方法引用目标类型和默认方法">
+                        <svg aria-hidden="true" class="octicon octicon-link"
+                             height="16" version="1.1" viewBox="0 0 16 16"
+                             width="16">
+                            <path fill-rule="evenodd"
+                                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                        </svg>
+                    </a>深入理解Java 8 Lambda（语言篇——lambda，方法引用，目标类型和默认方法）
+                    </h4>
+                    <p>
+                        <a href="http://www.cnblogs.com/figure9/p/java-8-lambdas-insideout-language-features.html"
+                           rel="nofollow">http://www.cnblogs.com/figure9/p/java-8-lambdas-insideout-language-features.html</a>
+                    </p>
+                </article>
+            </div>
+        </div>
+
+        <!--标签-->
+        <div class="ui attached segment m-padded-lr-responsive">
+            <div class="ui basic teal left pointing label">java</div>
+            <div class="ui basic teal left pointing label">spring</div>
+            <div class="ui basic teal left pointing label">linux</div>
+            <div class="ui basic teal left pointing label">mysql</div>
+            <div class="ui basic teal left pointing label">postgresql</div>
+            <div class="ui basic teal left pointing label">python</div>
+
+        </div>
+
+        <!--赞赏-->
+        <div class="ui center aligned attached segment">
+            <button id="payButton" class="ui orange basic circular button">赞赏
+            </button>
+        </div>
+
+        <div class="ui payQR flowing popup transition hidden">
+            <div class="ui orange basic label">
+                <div class="ui images" style="font-size: inherit !important;">
+                    <div class="image">
+                        <img src="./static/images/wechat-pay.jpg" alt=""
+                             class="ui rounded bordered image"
+                             style="width: 180px;">
+                        <div>微信</div>
+                    </div>
+                    <div class="image">
+                        <img src="./static/images/ali-pay.jpg" alt=""
+                             class="ui rounded bordered image"
+                             style="width: 180px;">
+                        <div>支付宝</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--推荐文章-->
+        <div class="ui attached positive message">
+            <div class="ui middle aligned grid">
+                <!--同系列-->
+                <div class="eight wide column">
+                    <ui class="list">
+                        <li>spring 使用, springboot 结合</li>
+                        <li>spring 使用, springboot 结合</li>
+                        <li>spring 使用, springboot 结合</li>
+                        <li>spring 使用, springboot 结合</li>
+                    </ui>
+                </div>
+                <!--最新/高赞-->
+                <div class="eight wide column">
+                    <ui class="list">
+                        <li>spring 使用, springboot 结合</li>
+                        <li>spring 使用, springboot 结合</li>
+                        <li>spring 使用, springboot 结合</li>
+                        <li>spring 使用, springboot 结合</li>
+                    </ui>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!--留言-->
+        <div class="ui bottom attached segment">
+            <!--留言区域列表-->
+            <div class="ui teal segment">
+                <div class="ui comments">
+                    <h3 class="ui dividing header">Comments</h3>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="https://unsplash.it/100/100?image=1005">
+                        </a>
+                        <div class="content">
+                            <a class="author">Matt</a>
+                            <div class="metadata">
+                                <span class="date">Today at 5:42PM</span>
+                            </div>
+                            <div class="text">
+                                How artistic!
+                            </div>
+                            <div class="actions">
+                                <a class="reply">Reply</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="https://unsplash.it/100/100?image=1006">
+                        </a>
+                        <div class="content">
+                            <a class="author">Elliot Fu</a>
+                            <div class="metadata">
+                                <span class="date">Yesterday at 12:30AM</span>
+                            </div>
+                            <div class="text">
+                                <p>This has been very useful for my research.
+                                    Thanks as well!</p>
+                            </div>
+                            <div class="actions">
+                                <a class="reply">Reply</a>
+                            </div>
+                        </div>
+                        <div class="comments">
+                            <div class="comment">
+                                <a class="avatar">
+                                    <img src="https://unsplash.it/100/100?image=1006">
+                                </a>
+                                <div class="content">
+                                    <a class="author">Jenny Hess</a>
+                                    <div class="metadata">
+                                        <span class="date">Just now</span>
+                                    </div>
+                                    <div class="text">
+                                        Elliot you are always so right :)
+                                    </div>
+                                    <div class="actions">
+                                        <a class="reply">Reply</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="https://unsplash.it/100/100?image=1005">
+                        </a>
+                        <div class="content">
+                            <a class="author">Joe Henderson</a>
+                            <div class="metadata">
+                                <span class="date">5 days ago</span>
+                            </div>
+                            <div class="text">
+                                Dude, this is awesome. Thanks so much
+                            </div>
+                            <div class="actions">
+                                <a class="reply">Reply</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--提交留言-->
+            <div class="ui form">
+                <div class="field">
+                    <textarea name="content" placeholder="请输入评论..."></textarea>
+                </div>
+                <div class="fields">
+                    <div class="m-mobile-wide m-margin-bottom-small field">
+                        <div class="ui left icon input">
+                            <i class="user icon"></i>
+                            <input type="text" name="nickname" placeholder="姓名">
+                        </div>
+                    </div>
+                    <div class="m-mobile-wide m-margin-bottom-small field">
+                        <div class="ui left icon input">
+                            <i class="mail icon"></i>
+                            <input type="text" name="email" placeholder="邮箱">
+                        </div>
+                    </div>
+                    <div class="m-mobile-wide m-margin-bottom-small field">
+                        <button class="ui teal m-mobile-wide labeled submit icon button">
+                            <i class="icon edit"></i> Add Reply
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--底部 footer-->
+<footer class="ui inverted vertical segment m-padded-tb-huge">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided stackable grid">
+            <div class="four wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <img src="./static/images/wechat-chanspc.jpg"
+                             class="ui round image" alt=""
+                             style="width: 110px;">
+                    </div>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-opacity-massive">最新博客</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">spring boot 使用</a>
+                    <a href="#" class="item">spring cloud 使用</a>
+                    <a href="#" class="item">mybatis 使用</a>
+                    <a href="#" class="item">netty 使用</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-opacity-massive">联系我</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">github</a>
+                    <a href="#" class="item">email</a>
+                </div>
+            </div>
+            <div class="six wide column">
+                <h4 class="ui inverted header m-opacity-massive ">关于我</h4>
+                <p class="m-text-thin m-text-spaced m-opacity-mini ">hello,
+                    我是长脖子树!hello, 我是长脖子树!hello, 我是长脖子树!hello,
+                    我是长脖子树!hello, 我是长脖子树!</p>
+            </div>
+        </div>
+
+        <!--分割线-->
+        <div class="ui inverted section divider">
+            <br>
+            <br>
+            <p class="m-text-thin m-text-spaced m-opacity-mini ">
+                Copyright©2017-2018 GiraffeTree Designed by
+                GiraffeTree</p>
+        </div>
+    </div>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<script>
+    $('.meun.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide')
+    });
+
+    $('#payButton').popup({
+        popup: $('.payQR.popup'),
+        on: 'click',
+        position: 'bottom center'
+    });
+
+</script>
+
+</body>
+</html>
+

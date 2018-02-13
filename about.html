@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>博客详情页</title>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <link rel="stylesheet" href="./static/css/me.css">
+</head>
+<body>
+<!--导航-->
+<!--ui: ui 组件, inverted 反转为黑色,attached 贴合,依附-->
+<nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+    <div class="ui container">
+        <!--ui inverted secondary menu-->
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui teal header item">Giraffe Tree</h2>
+            <a href="#" class="m-item item m-mobile-hide"><i
+                    class="home icon"></i>首页</a>
+            <a href="#" class="m-item item m-mobile-hide"><i
+                    class="idea icon"></i>分类</a>
+            <a href="#" class="m-item item m-mobile-hide"><i
+                    class="clone icon"></i>归档</a>
+            <a href="#" class="m-item item m-mobile-hide"><i
+                    class="tags icon"></i>标签</a>
+            <a href="#" class="m-item item m-mobile-hide"><i
+                    class="info icon"></i>关于我</a>
+            <div class="right m-item m-mobile-hide item ">
+                <div class="ui icon inverted transparent input">
+                    <input type="text" placeholder="Search...">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#"
+       class="ui meun toggle black icon button m-right-top m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+
+</nav>
+
+<!--中间内容-->
+<div class="m-container m-padded-tb-large">
+    <div class="ui container">
+        <!--grid 分成16份-->
+        <!--stackable 手机端适应-->
+        <div class="ui stackable grid">
+            <div class="eleven wide column">
+                <img src="https://picsum.photos/800/600?image=0
+" alt="" class="ui rounded image">
+            </div>
+            <div class="five wide column">
+                <div class="ui header">关于我</div>
+                <!--个人介绍-->
+                <div class="ui attached segment">
+                    <p class="m-text">
+                        发展迅速，在开发Android的几年的时间里，用来构建Android应用的架构与技术一直在不断进化。随着项目的不断更新迭代，应用的架构也有不一样的变化。</p>
+                    <p class="m-text">应用的架构也有不一样的变化</p>
+                </div>
+
+                <!--爱好-->
+                <div class="ui attached segment">
+                    <div class="ui orange basic left pointing label">code</div>
+                    <div class="ui orange basic left pointing label">写作</div>
+                    <div class="ui orange basic left pointing label">运动</div>
+                </div>
+
+                <!--技术-->
+                <div class="ui attached segment">
+                    <div class="ui teal basic left pointing label m-margin-tb">
+                        java
+                    </div>
+                    <div class="ui teal basic left pointing label m-margin-tb">
+                        js
+                    </div>
+                    <div class="ui teal basic left pointing label m-margin-tb">
+                        scala
+                    </div>
+                    <div class="ui teal basic left pointing label m-margin-tb">
+                        php
+                    </div>
+                    <div class="ui teal basic left pointing label m-margin-tb">
+                        python
+                    </div>
+                </div>
+
+                <div class="ui bottom attached segment">
+                    <a href="#"
+                       class="ui contact-way-wechat circular icon button"
+                       data-content="cccreat11" data-position="bottom center">
+                        <i class="wechat icon"></i></a>
+
+                    <a href="#" class="ui wechat-qr circular icon button"><i
+                            class="qq icon"></i></a>
+
+                    <a href="#" class="ui circular icon button"><i
+                            class="github icon"></i></a>
+                </div>
+
+                <div class="ui wechat-qr-origin flowing popup transition hidden">
+                    <img src="./static/images/wechat-chanspc.jpg" alt=""
+                         class="ui rounded image" style="width: 100px">
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--底部 footer-->
+<footer class="ui inverted vertical segment m-padded-tb-huge">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided stackable grid">
+            <div class="four wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <img src="./static/images/wechat-chanspc.jpg"
+                             class="ui round image" alt=""
+                             style="width: 110px;">
+                    </div>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-opacity-massive">最新博客</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">spring boot 使用</a>
+                    <a href="#" class="item">spring cloud 使用</a>
+                    <a href="#" class="item">mybatis 使用</a>
+                    <a href="#" class="item">netty 使用</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-opacity-massive">联系我</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">github</a>
+                    <a href="#" class="item">email</a>
+                </div>
+            </div>
+            <div class="six wide column">
+                <h4 class="ui inverted header m-opacity-massive ">关于我</h4>
+                <p class="m-text-thin m-text-spaced m-opacity-mini ">hello,
+                    我是长脖子树!hello, 我是长脖子树!hello, 我是长脖子树!hello,
+                    我是长脖子树!hello, 我是长脖子树!</p>
+            </div>
+        </div>
+
+        <!--分割线-->
+        <div class="ui inverted section divider">
+            <br>
+            <br>
+            <p class="m-text-thin m-text-spaced m-opacity-mini ">
+                Copyright©2017-2018 GiraffeTree Designed by
+                GiraffeTree</p>
+        </div>
+    </div>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<script>
+    $('.meun.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide')
+    });
+
+    $('.contact-way-wechat').popup();
+
+    $('.wechat-qr').popup({
+        popup: $('.wechat-qr-origin.popup'),
+        on: 'hover',
+        position: 'bottom center'
+    });
+
+
+</script>
+
+</body>
+</html>
+
